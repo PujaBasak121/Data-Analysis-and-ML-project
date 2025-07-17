@@ -1,0 +1,15 @@
+## Lecture 6: Model Training, Testing, and Evaluation
+
+### Train-Test Split:
+
+```python
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+```
+
+### Evaluation Metrics:
+
+* Accuracy
+* Precision, Recall
+* Confusion Matrix
+

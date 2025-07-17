@@ -1,0 +1,30 @@
+## Case Study: Predicting Student Performance
+
+### Dataset:
+
+* Study Time
+* Attendance
+* Previous Grades
+* Parental Education
+
+### Code:
+
+```python
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Hypothetical dataset
+data = pd.DataFrame({
+    'study_time': [1, 2, 3, 4, 5],
+    'attendance': [70, 80, 90, 95, 100],
+    'previous_grades': [60, 65, 70, 80, 85],
+    'final_score': [62, 68, 75, 82, 90]
+})
+
+X = data[['study_time', 'attendance', 'previous_grades']]
+y = data['final_score']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
+model = LinearRegression()
+model.fit(X_train, y_train)
+print("Predicted Scores:", model.predict(X_test))

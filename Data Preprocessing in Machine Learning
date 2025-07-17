@@ -1,0 +1,20 @@
+## Lecture 5: Data Preprocessing in Machine Learning
+
+Preprocessing prepares raw data for modeling.
+
+### Techniques:
+
+* Handling missing values
+* Encoding categorical variables
+* Feature scaling
+
+#### Example:
+
+```python
+import pandas as pd
+from sklearn.preprocessing import StandardScaler
+
+data = pd.read_csv("data.csv")
+data.fillna(data.mean(), inplace=True)
+scaler = StandardScaler()
+scaled_data = scaler.fit_transform(data)

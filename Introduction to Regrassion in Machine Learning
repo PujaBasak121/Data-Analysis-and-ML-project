@@ -1,0 +1,14 @@
+## Lecture 3: Introduction to Regression in Machine Learning
+
+Regression predicts continuous values. Examples: predicting house prices, temperatures, etc.
+
+### Example:
+
+```python
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import make_regression
+
+X, y = make_regression(n_samples=100, n_features=1, noise=0.1)
+model = LinearRegression()
+model.fit(X, y)
+print("Coefficient:", model.coef_)

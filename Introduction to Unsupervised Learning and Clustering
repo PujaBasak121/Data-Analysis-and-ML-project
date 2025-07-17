@@ -1,0 +1,18 @@
+## Lecture 4: Introduction to Unsupervised Learning & Clustering
+
+Unsupervised learning involves learning patterns from unlabeled data.
+
+### Clustering:
+
+Used for customer segmentation, document clustering, etc.
+
+#### Example with KMeans:
+
+```python
+from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+
+X, _ = make_blobs(n_samples=300, centers=4)
+kmeans = KMeans(n_clusters=4)
+kmeans.fit(X)
+print("Cluster Centers:", kmeans.cluster_centers_)
